@@ -1,1 +1,1 @@
-# Here, I'll upload the questions I'm praticing, in Java.
+# Here, I upload the Leet questions I'm praticing (in Java).
