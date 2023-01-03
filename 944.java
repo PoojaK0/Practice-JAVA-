@@ -63,3 +63,22 @@ class Solution {
     return ans;    
     }
 }
+
+
+//Another sol
+class Solution {
+    public int minDeletionSize(String[] strs) {
+        int row=strs[0].length();
+        int col=strs.length;
+        int as=0;
+        for(int i=0; i<row; i++){
+            for(int j=1; j<col; j++)
+            if(strs[j].charAt(i) < strs[j-1].charAt(i)){
+            as++;
+            break;
+            }
+        }
+    
+    return as;
+    }
+}
