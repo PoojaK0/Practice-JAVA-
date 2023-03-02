@@ -23,15 +23,25 @@ public class Main {
     }
 
     public static int firstIndex(int[] arr, int n, int x){
+        // correct but not good
+        
+//         if(n == arr.length)
+//         return -1;
+//         int no=firstIndex(arr,n+1,x);
+//         if(arr[n] ==x)
+//         return n;
+//         else
+//          return no;
+        
+        
+        // good
         if(n == arr.length)
         return -1;
 
-        
-        int no=firstIndex(arr,n+1,x);
         if(arr[n] ==x)
         return n;
         else
-         return no;
+         return firstIndex(arr,n+1,x);
     }
 
 }
