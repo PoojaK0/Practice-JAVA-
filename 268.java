@@ -13,11 +13,11 @@ class Solution {
 
 class Solution {
     public int missingNumber(int[] nums) {
-        int res=0;
-        for(int i=0; i<nums.length; i++){
-            res=res^i+1;
-            res^=nums[i];
-        }
-        return res;
+         int xor = 0, i = 0;
+	for (i = 0; i < nums.length; i++) {
+		xor = xor ^ i ^ nums[i];
+	}
+
+	return xor ^ i;
     }
 }
