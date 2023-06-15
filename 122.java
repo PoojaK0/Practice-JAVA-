@@ -35,3 +35,31 @@ class Solution {
     return true;
     }
 }
+
+
+
+
+//OPTIMIZED
+
+
+class Solution {
+    public int maxProfit(int[] arr) {
+        int i=0,buy,sell,profit=0;
+        int n=arr.length-1;
+
+        while(i<n){
+            
+            while(i<n && arr[i+1] <= arr[i])
+            i++;
+            buy=arr[i];
+
+            while(i<n && arr[i+1] > arr[i])
+            i++;
+            sell=arr[i];
+
+            profit+=sell-buy;
+
+        }
+        return profit;
+    }
+}
