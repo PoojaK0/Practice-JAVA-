@@ -14,7 +14,27 @@ class Solution {
             return i;
         }
         return -1;
-        
+    }
+}
 
+
+
+// 
+class Solution {
+    public int strStr(String s, String t) {
+        if(s.length() < t.length()) 
+        return -1;
+
+        if(t.length() == 0)
+        return -1;
+
+        for(int i=0; i<s.length(); i++){
+            if(s.charAt(i) == t.charAt(0)){
+                if(t.length()+i <= s.length())
+                if(s.substring(i,t.length()+i).equals(t))
+                return i;
+            }
+        }
+        return -1;
     }
 }
